@@ -2,7 +2,7 @@ import { http, HttpResponse } from "msw";
 import { setupServer } from "msw/node";
 
 // Import endpoint and error settings
-import { CAR_API_ENDPOINT, ERRORS } from "../settings";
+import { CAR_API_ENDPOINT, HTTP_ERRORS } from "../settings";
 
 // Import the function to test
 import { HTTP } from "../index";
@@ -53,6 +53,6 @@ describe("getCars", () => {
       })
     );
 
-    await expect(HTTP.getCars()).rejects.toThrow(ERRORS[500]);
+    await expect(HTTP.getCars()).rejects.toThrow(HTTP_ERRORS[500]);
   });
 });
