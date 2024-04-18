@@ -1,0 +1,204 @@
+{
+    "cars": [
+        {
+            "id": "1",
+            "make": "Toyota",
+            "model": "Corolla",
+            "year": 2020,
+            "color": "Red",
+            "engine": "1.8L I4",
+            "transmission": "Automatic",
+            "doors": 4
+        },
+        {
+            "id": "2",
+            "make": "Honda",
+            "model": "Civic",
+            "year": 2019,
+            "color": "Blue",
+            "engine": "2.0L I4",
+            "transmission": "Manual",
+            "doors": 4
+        },
+        {
+            "id": "3",
+            "make": "Ford",
+            "model": "Focus",
+            "year": 2018,
+            "color": "Black",
+            "engine": "2.3L I4 turbo",
+            "transmission": "Automatic",
+            "doors": 4
+        },
+        {
+            "id": "4",
+            "make": "Chevrolet",
+            "model": "Malibu",
+            "year": 2021,
+            "color": "Silver",
+            "engine": "1.5L I4 turbo",
+            "transmission": "Automatic",
+            "doors": 4
+        },
+        {
+            "id": "5",
+            "make": "Tesla",
+            "model": "Model 3",
+            "year": 2022,
+            "color": "White",
+            "engine": "Electric",
+            "transmission": "Automatic",
+            "doors": 4
+        },
+        {
+            "id": "6",
+            "make": "BMW",
+            "model": "3 Series",
+            "year": 2020,
+            "color": "Navy",
+            "engine": "2.0L I4 turbo",
+            "transmission": "Automatic",
+            "doors": 4
+        },
+        {
+            "id": "7",
+            "make": "Audi",
+            "model": "A4",
+            "year": 2021,
+            "color": "Black",
+            "engine": "2.0L I4 turbo",
+            "transmission": "Automatic",
+            "doors": 4
+        },
+        {
+            "id": "8",
+            "make": "Mercedes-Benz",
+            "model": "C-Class",
+            "year": 2019,
+            "color": "Gray",
+            "engine": "1.5L I4 turbo",
+            "transmission": "Automatic",
+            "doors": 4
+        },
+        {
+            "id": "9",
+            "make": "Nissan",
+            "model": "Altima",
+            "year": 2018,
+            "color": "Red",
+            "engine": "2.5L I4",
+            "transmission": "Automatic",
+            "doors": 4
+        },
+        {
+            "id": "10",
+            "make": "Hyundai",
+            "model": "Sonata",
+            "year": 2021,
+            "color": "Silver",
+            "engine": "2.5L I4",
+            "transmission": "Automatic",
+            "doors": 4
+        },
+        {
+            "id": "11",
+            "make": "Kia",
+            "model": "Optima",
+            "year": 2020,
+            "color": "White",
+            "engine": "2.4L I4",
+            "transmission": "Automatic",
+            "doors": 4
+        },
+        {
+            "id": "12",
+            "make": "Volkswagen",
+            "model": "Passat",
+            "year": 2019,
+            "color": "Black",
+            "engine": "2.0L I4 turbo",
+            "transmission": "Automatic",
+            "doors": 4
+        },
+        {
+            "id": "13",
+            "make": "Subaru",
+            "model": "Legacy",
+            "year": 2020,
+            "color": "Blue",
+            "engine": "2.5L I4",
+            "transmission": "Automatic",
+            "doors": 4
+        },
+        {
+            "id": "14",
+            "make": "Mazda",
+            "model": "Mazda6",
+            "year": 2021,
+            "color": "Red",
+            "engine": "2.5L I4 turbo",
+            "transmission": "Automatic",
+            "doors": 4
+        },
+        {
+            "id": "15",
+            "make": "Lexus",
+            "model": "IS",
+            "year": 2022,
+            "color": "White",
+            "engine": "2.0L I4 turbo",
+            "transmission": "Automatic",
+            "doors": 4
+        },
+        {
+            "id": "16",
+            "make": "Infiniti",
+            "model": "Q50",
+            "year": 2021,
+            "color": "Black",
+            "engine": "2.0L I4 turbo",
+            "transmission": "Automatic",
+            "doors": 4
+        },
+        {
+            "id": "17",
+            "make": "Acura",
+            "model": "TLX",
+            "year": 2020,
+            "color": "Blue",
+            "engine": "2.0L I4 turbo",
+            "transmission": "Automatic",
+            "doors": 4
+        },
+        {
+            "id": "18",
+            "make": "Buick",
+            "model": "Regal",
+            "year": 2019,
+            "color": "Red",
+            "engine": "2.0L I4 turbo",
+            "transmission": "Automatic",
+            "doors": 4
+        },
+        {
+            "id": "19",
+            "make": "Cadillac",
+            "model": "CT4",
+            "year": 2022,
+            "color": "White",
+            "engine": "2.0L I4 turbo",
+            "transmission": "Automatic",
+            "doors": 4
+        },
+        {
+            "id": "20",
+            "make": "Genesis",
+            "model": "G70",
+            "year": 2021,
+            "color": "Black",
+            "engine": "2.0L I4 turbo",
+            "transmission": "Automatic",
+            "doors": 4
+        }
+    ]
+}
