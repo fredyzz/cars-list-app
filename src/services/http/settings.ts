@@ -12,10 +12,12 @@ export const HTTP_ERRORS: { [key: number]: string } = {
 export const ERROR_MESSAGES = {
   badParams: {
     id: "Received bad ID parameter.",
+    noAllRequiredFields: "Not all required fields were received.",
   },
   notExecuted: {
     notDeleted:
       "Something went wrong with the server. The car was not deleted.",
+    notSaved: "Something went wrong with the server. The car was not saved.",
   },
 };
 
