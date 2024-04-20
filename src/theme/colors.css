@@ -1,0 +1,11 @@
+/* Colors */
+
+:root {
+  --c-white: #ffffff;
+  --c-black: #000000;
+  --c-primary: #219ebc;
+  --c-primary-light: #8ecae6;
+  --c-secondary: #023047;
+  --c-accent: #fb8500;
+  --c-accent-light: #ffb703;
+}

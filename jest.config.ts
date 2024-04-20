@@ -4,6 +4,7 @@ export default {
   },
   moduleNameMapper: {
     "\\.(gif|ttf|eot|svg|png)$": "<rootDir>/test/__mocks__/fileMock.js",
+    "\\.(css|less|scss|sass)$": "identity-obj-proxy",
   },
   testMatch: ["**/*.test.ts", "**/*.test.tsx"],
   setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],

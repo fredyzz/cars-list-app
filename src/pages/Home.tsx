@@ -1,5 +1,7 @@
 import { useCarsContext } from "../contexts/CarsContext/useCarsContext";
-import CarsList from "../components/Cars";
+import CarsList from "../components/CarsList";
+
+import styles from "./Home.module.css";
 
 function Home() {
   const { state } = useCarsContext();
@@ -18,9 +20,20 @@ function Home() {
   }
 
   return (
-    <div>
-      <h1>Cars</h1>
-      <CarsList cars={cars} />
+    <div className={styles.home}>
+      <header className={styles.header}>
+        <h1>Cars</h1>
+      </header>
+      {/* temporal styles */}
+      <nav
+        style={{ height: "50px", border: "1px solid blue", marginTop: "30px" }}
+      >
+        navbar here
+      </nav>
+      <main>
+        <CarsList cars={cars} />
+      </main>
+      <footer>footer here</footer>
     </div>
   );
 }
