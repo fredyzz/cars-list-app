@@ -1,0 +1,17 @@
+.CarList {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  height: 100%;
+  max-width: 1200px;
+  padding: 2rem;
+  width: 100%;
+
+  @media (min-width: 620px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 980px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

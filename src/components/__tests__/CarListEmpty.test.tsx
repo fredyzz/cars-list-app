@@ -3,27 +3,27 @@
  */
 
 import { render, screen } from "@testing-library/react";
-import CarsListEmpty from "../CarsListEmpty";
+import CarListEmpty from "../CarListEmpty";
 
-describe("CarsListEmpty", () => {
+describe("CarListEmpty", () => {
   test("renders CarsListEmpty with the correct figCaptionText", () => {
-    render(<CarsListEmpty />);
+    render(<CarListEmpty />);
     expect(
-      screen.getByText(CarsListEmpty.settings.figCaptionText)
+      screen.getByText(CarListEmpty.settings.figCaptionText)
     ).toBeInTheDocument();
   });
 
   test("renders CarsListEmpty with image", () => {
-    render(<CarsListEmpty />);
+    render(<CarListEmpty />);
     expect(
-      screen.getByAltText(CarsListEmpty.settings.imageAlt)
+      screen.getByAltText(CarListEmpty.settings.imageAlt)
     ).toBeInTheDocument();
   });
 
   test("renders CarsListEmpty with hidden text", () => {
-    render(<CarsListEmpty />);
+    render(<CarListEmpty />);
     expect(
-      screen.getByText(CarsListEmpty.settings.visuallyHiddenText)
+      screen.getByText(CarListEmpty.settings.visuallyHiddenText)
     ).toBeInTheDocument();
   });
 });

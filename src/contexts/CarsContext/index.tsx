@@ -12,6 +12,7 @@ import { UNKNOWN_ERROR_MESSAGE } from "../../services/http/settings";
 export type State = {
   cars: CarList | null;
   error: string | null;
+  filteredCars: CarList | null;
   loading: boolean;
   selectedCar: Car | null;
 };
@@ -19,6 +20,7 @@ export type State = {
 export interface ContextState {
   state: {
     cars: CarList | null;
+    filteredCars: CarList | null;
     error: string | null;
     loading: boolean;
     selectedCar: Car | null;
@@ -29,18 +31,24 @@ export interface ContextState {
 export const CarsContext = createContext({} as ContextState);
 
 export const CarsContextProvider = ({
+  initialState,
   children,
 }: {
+  initialState?: State;
   children: React.ReactNode;
 }) => {
-  const initialState: State = {
+  const initialEmptyState: State = {
     cars: null,
     error: null,
+    filteredCars: null,
     loading: true,
     selectedCar: null,
   };
 
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(
+    reducer,
+    initialState || initialEmptyState
+  );
 
   const loadCars = async () => {
     try {

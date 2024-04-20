@@ -1,5 +1,3 @@
-import "./App.css";
-
 import { CarsContextProvider } from "./contexts/CarsContext";
 
 import Home from "./pages/Home";
