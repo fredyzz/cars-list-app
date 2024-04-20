@@ -26,12 +26,7 @@ function Home() {
       </header>
       {/* temporal styles */}
       <nav
-        style={{
-          height: "80px",
-          border: "1px solid blue",
-          marginTop: "30px",
-          flexBasis: "100%",
-        }}
+        style={{ height: "60px", border: "1px solid blue", marginTop: "1rem" }}
       >
         navbar here
       </nav>
