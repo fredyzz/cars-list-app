@@ -8,4 +8,11 @@ export default {
   },
   testMatch: ["**/*.test.ts", "**/*.test.tsx"],
   setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
+  collectCoverageFrom: [
+    "**/*.{ts,tsx}",
+    "!**/*.test.{ts,tsx}",
+    "!**/node_modules/**",
+    "!**/vendor/**",
+    "!*.config.ts",
+  ],
 };
