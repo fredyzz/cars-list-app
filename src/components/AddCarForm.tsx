@@ -18,15 +18,13 @@ function AddCarForm() {
     undefined
   );
 
-  const [make, setMake] = useState<string | undefined>(undefined);
-  const [model, setModel] = useState<string | undefined>(undefined);
-  const [year, setYear] = useState<number | undefined>(undefined);
-  const [color, setColor] = useState<string | undefined>(undefined);
-  const [engine, setEngine] = useState<string | undefined>(undefined);
-  const [transmission, setTransmission] = useState<string | undefined>(
-    undefined
-  );
-  const [doors, setDoors] = useState<number | undefined>(undefined);
+  const [make, setMake] = useState("");
+  const [model, setModel] = useState("");
+  const [year, setYear] = useState(0);
+  const [color, setColor] = useState("");
+  const [engine, setEngine] = useState("");
+  const [transmission, setTransmission] = useState("");
+  const [doors, setDoors] = useState(0);
 
   const addCar = async (newCar: Partial<Car>): Promise<Car | undefined> => {
     try {
@@ -168,8 +166,10 @@ function AddCarForm() {
         )}
         <button
           type="submit"
+          role="button"
           className={styles.submitButton}
           disabled={isSubmitting}
+          aria-label="Save Car"
         >
           Save Car
         </button>
