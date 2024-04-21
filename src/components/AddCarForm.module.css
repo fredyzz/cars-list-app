@@ -1,0 +1,73 @@
+.AddCarForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6em;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+
+  @media (min-width: 768px) {
+    width: 40%;
+  }
+
+  label {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+
+  input {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    padding: 0.5em;
+    width: 100%;
+  }
+
+  input:focus {
+    border: 1px solid var(--c-accent);
+    outline: none;
+  }
+}
+
+.submitButton {
+  margin-bottom: 1em;
+  margin-top: 1em;
+  width: 80%;
+}
+
+.submitButton:disabled {
+  background-color: #ccc;
+  color: #666;
+}
+
+.notification {
+  color: red;
+  height: 30px;
+  max-height: 40px;
+  margin-top: 1em;
+  overflow: hidden;
+  padding: 0.5em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 80%;
+}

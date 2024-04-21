@@ -4,15 +4,17 @@ import { CarList } from "../../interfaces/carList";
 import { State } from "./index";
 
 export enum ACTIONS {
-  SET_CARS = "SET_CARS",
+  ADD_CAR = "ADD_CAR",
   FILTER_CARS = "FILTER_CARS",
   RESET_FILTER = "RESET_FILTER",
+  SET_CARS = "SET_CARS",
   SET_ERROR = "SET_ERROR",
   SET_LOADING = "SET_LOADING",
   SET_SELECTED_CAR = "SET_SELECTED_CAR",
 }
 
 export type Action =
+  | { type: ACTIONS.ADD_CAR; payload: Car }
   | { type: ACTIONS.SET_CARS; payload: CarList }
   | { type: ACTIONS.FILTER_CARS; payload: (car: Car) => boolean }
   | { type: ACTIONS.RESET_FILTER }
@@ -22,6 +24,11 @@ export type Action =
 
 export const reducer = (state: State, action: Action): State => {
   switch (action.type) {
+    case ACTIONS.ADD_CAR:
+      return {
+        ...state,
+        cars: [...(state.cars || []), action.payload],
+      };
     case ACTIONS.SET_CARS:
       return { ...state, cars: action.payload };
     case ACTIONS.FILTER_CARS:

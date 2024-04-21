@@ -18,6 +18,8 @@ export type State = {
 };
 
 export interface ContextState {
+  actions: typeof ACTIONS;
+  dispatch: React.Dispatch<Action>;
   state: {
     cars: CarList | null;
     filteredCars: CarList | null;
@@ -25,7 +27,6 @@ export interface ContextState {
     loading: boolean;
     selectedCar: Car | null;
   };
-  dispatch: React.Dispatch<Action>;
 }
 
 export const CarsContext = createContext({} as ContextState);
@@ -74,7 +75,7 @@ export const CarsContextProvider = ({
   }, []);
 
   return (
-    <CarsContext.Provider value={{ state, dispatch }}>
+    <CarsContext.Provider value={{ state, dispatch, actions: ACTIONS }}>
       {children}
     </CarsContext.Provider>
   );

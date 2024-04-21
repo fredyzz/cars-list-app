@@ -1,11 +1,11 @@
 import { CarsContextProvider } from "./contexts/CarsContext";
 
-import Home from "./pages/Home";
+import { Router } from "./components/Router";
 
 function App() {
   return (
     <CarsContextProvider>
-      <Home />
+      <Router />
     </CarsContextProvider>
   );
 }

@@ -1,10 +1,10 @@
 import { useCarsContext } from "../contexts/CarsContext/useCarsContext";
 import Layout from "./Layout";
-import CarsList from "../components/CarList";
+import AddCarForm from "../components/AddCarForm";
 
-import styles from "./Home.module.css";
+import styles from "./AddCar.module.css";
 
-function Home() {
+function AddCar() {
   const { state } = useCarsContext();
   const { cars } = state;
 
@@ -14,11 +14,11 @@ function Home() {
 
   return (
     <Layout>
-      <div className={styles.Home}>
-        <CarsList />
+      <div className={styles.AddCar}>
+        <AddCarForm />
       </div>
     </Layout>
   );
 }
 
-export default Home;
+export default AddCar;
