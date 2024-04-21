@@ -1,5 +1,5 @@
 import { useCarsContext } from "../contexts/CarsContext/useCarsContext";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import styles from "./Layout.module.css";
 
@@ -22,7 +22,9 @@ function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className={styles.Layout}>
       <header className={styles.header}>
-        <h1>GARAGE APP</h1>
+        <Link to={"/"}>
+          <h1>GARAGE APP</h1>
+        </Link>
       </header>
       {/* temporal styles */}
       <nav style={{ height: "60px", border: "1px solid blue" }}>
