@@ -1,12 +1,17 @@
+import { useLocation } from "react-router-dom";
 import { useCarsContext } from "../contexts/CarsContext/useCarsContext";
 
 import Navbar from "../components/Navbar";
+import FilterBar from "../components/FilterBar";
 
 import styles from "./Layout.module.css";
 
 function Layout({ children }: { children: React.ReactNode }) {
+  const { pathname } = useLocation();
   const { state } = useCarsContext();
   const { loading, error } = state;
+
+  const isHome = pathname === "/";
 
   if (loading) {
     return <div>Loading...</div>;
@@ -21,8 +26,7 @@ function Layout({ children }: { children: React.ReactNode }) {
       <header className={styles.header}>
         <Navbar />
       </header>
-      {/* temporal styles */}
-      <div style={{ height: "60px", border: "1px solid blue" }}>filters</div>
+      {isHome && <FilterBar />}
       <main className={styles.main}>{children}</main>
     </div>
   );

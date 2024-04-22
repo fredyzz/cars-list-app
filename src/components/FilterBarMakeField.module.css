@@ -1,0 +1,25 @@
+.FilterBarMakeField {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  label {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+  }
+
+  select {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-left: 0.5rem;
+    padding: 0.5rem;
+
+    @media (min-width: 768px) {
+    }
+  }
+}
