@@ -1,30 +1,40 @@
-# React + TypeScript + Vite
+# Garage App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Simple application built with React, TypeScript and CSS.
+Tested with JEST and MSW mocks.
 
-Currently, two official plugins are available:
+**⚠️ Important ⚠️**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Thank you for this test review 🤗. I am aware that the app is missing many things, it has others that could be improved and above all it can be made more scalable.
+This is what I was able to do in the time I was able to dedicate. If you want to see a specific improvement or have questions about something, I can gladly resolve it.**
 
-## Expanding the ESLint configuration
+## Table of Contents
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- [Installation](#Installation)
+- [Testing](#Testing)
 
-- Configure the top-level `parserOptions` property like this:
+## Installation
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+The following commands will start json-server and the React application.
+
+### Install dependencies
+
+```bash
+npm i
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Run the project
+
+```bash
+npm run dev
+```
+
+## Testing
+
+The app is tested with JEST and MSW to mock network requests
+
+### Run tests
+
+```bash
+npm run test:jest:watch
+```
