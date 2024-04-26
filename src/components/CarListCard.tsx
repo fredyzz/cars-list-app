@@ -1,5 +1,6 @@
 import { Car as CarInterface } from "../interfaces/car";
-import { MdDelete } from "react-icons/md";
+import { MdDelete, MdEdit } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 import styles from "./CarListCard.module.css";
 import { HTTP } from "../services/http";
@@ -10,6 +11,7 @@ interface CarProps {
 }
 
 function CarListCard({ car }: CarProps) {
+  const navigate = useNavigate();
   const { dispatch, actions } = useCarsContext();
 
   const handleDeleteButtonClick = async () => {
@@ -21,6 +23,10 @@ function CarListCard({ car }: CarProps) {
       // dispatch a set error action and show an error message in Layout
       console.error(error);
     }
+  };
+
+  const handleEditButtonClick = () => {
+    navigate(`/edit-car/${car.id}`);
   };
 
   return (
@@ -39,6 +45,13 @@ function CarListCard({ car }: CarProps) {
         </section>
       </div>
       <div className={styles.actions}>
+        <button
+          aria-label={`Edit car with id ${car.id}`}
+          onClick={handleEditButtonClick}
+          role="button"
+        >
+          <MdEdit />
+        </button>
         <button
           aria-label={`Delete car with id ${car.id}`}
           onClick={handleDeleteButtonClick}

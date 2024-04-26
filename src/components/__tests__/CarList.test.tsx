@@ -3,6 +3,7 @@
  */
 
 import { render, screen, act } from "@testing-library/react";
+import { MemoryRouter } from "react-router-dom";
 import { CarsContextProvider } from "../../contexts/CarsContext";
 
 import CarList from "../CarList";
@@ -17,9 +18,11 @@ describe("CarsList", () => {
   test("should render a car list using filtered cars", async () => {
     await act(async () => {
       render(
-        <CarsContextProvider initialState={INITIAL_STATE_WITH_FILTERED_CARS}>
-          <CarList />
-        </CarsContextProvider>
+        <MemoryRouter>
+          <CarsContextProvider initialState={INITIAL_STATE_WITH_FILTERED_CARS}>
+            <CarList />
+          </CarsContextProvider>
+        </MemoryRouter>
       );
     });
 
@@ -30,9 +33,11 @@ describe("CarsList", () => {
   test("should render a car list using cars stored when page loads", async () => {
     await act(async () => {
       render(
-        <CarsContextProvider initialState={INITIAL_STATE_WITH_INITIAL_CARS}>
-          <CarList />
-        </CarsContextProvider>
+        <MemoryRouter>
+          <CarsContextProvider initialState={INITIAL_STATE_WITH_INITIAL_CARS}>
+            <CarList />
+          </CarsContextProvider>
+        </MemoryRouter>
       );
     });
 
@@ -43,14 +48,16 @@ describe("CarsList", () => {
   test(`should show "${CarListEmpty.settings.figCaptionText}" when a user filter cars but there is no result`, async () => {
     await act(async () => {
       render(
-        <CarsContextProvider
-          initialState={{
-            ...INITIAL_STATE_WITH_INITIAL_CARS,
-            filteredCars: [],
-          }}
-        >
-          <CarList />
-        </CarsContextProvider>
+        <MemoryRouter>
+          <CarsContextProvider
+            initialState={{
+              ...INITIAL_STATE_WITH_INITIAL_CARS,
+              filteredCars: [],
+            }}
+          >
+            <CarList />
+          </CarsContextProvider>
+        </MemoryRouter>
       );
     });
 
