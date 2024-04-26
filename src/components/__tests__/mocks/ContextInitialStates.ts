@@ -45,7 +45,7 @@ export const INITIAL_STATE_WITH_FILTERED_CARS = {
     },
   ],
   loading: true,
-  selectedCar: null,
+  selectedCar: undefined,
 };
 
 export const INITIAL_STATE_WITH_INITIAL_CARS = {
@@ -64,5 +64,5 @@ export const INITIAL_STATE_WITH_INITIAL_CARS = {
   error: null,
   filteredCars: null,
   loading: true,
-  selectedCar: null,
+  selectedCar: undefined,
 };

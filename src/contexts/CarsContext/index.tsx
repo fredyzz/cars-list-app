@@ -14,7 +14,7 @@ export type State = {
   error: string | null;
   filteredCars: CarList | null;
   loading: boolean;
-  selectedCar: Car | null;
+  selectedCar: Car | undefined;
 };
 
 export interface ContextState {
@@ -25,7 +25,7 @@ export interface ContextState {
     filteredCars: CarList | null;
     error: string | null;
     loading: boolean;
-    selectedCar: Car | null;
+    selectedCar: Car | undefined;
   };
 }
 
@@ -43,7 +43,7 @@ export const CarsContextProvider = ({
     error: null,
     filteredCars: null,
     loading: true,
-    selectedCar: null,
+    selectedCar: undefined,
   };
 
   const [state, dispatch] = useReducer(
