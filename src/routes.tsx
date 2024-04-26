@@ -1,16 +1,19 @@
 import { IconType } from "react-icons";
 import { FaHome } from "react-icons/fa";
 import { IoIosAddCircle } from "react-icons/io";
+import { MdEdit } from "react-icons/md";
 import { Navigate, RouteObject } from "react-router-dom";
 
 import HomePage from "./pages/Home";
 import AddCarPage from "./pages/AddCar";
+import EditCarPage from "./pages/EditCar";
 
 export interface routes {
   icon?: IconType;
   label: string;
   path: string;
   element: React.ReactNode;
+  notVisible?: boolean;
 }
 
 // Add here new routes
@@ -26,6 +29,13 @@ export const routesConfig: routes[] = [
     element: <AddCarPage />,
     label: "Add Car",
     icon: IoIosAddCircle,
+  },
+  {
+    path: "/edit-car/:carId",
+    element: <EditCarPage />,
+    label: "Edit Car",
+    icon: MdEdit,
+    notVisible: true,
   },
   {
     path: "*",
