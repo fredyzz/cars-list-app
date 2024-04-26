@@ -1,0 +1,80 @@
+.CarDetail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--c-primary);
+  border-radius: 1rem;
+  margin: 2rem;
+  max-width: 900px;
+  padding: 2rem;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+.carPicture {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    width: 50%;
+  }
+
+  figcaption {
+    align-self: center;
+    padding-left: 1rem;
+  }
+}
+
+.carDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    width: 50%;
+    margin-top: 0;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.2rem;
+
+    li {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+}
