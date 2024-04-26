@@ -1,6 +1,6 @@
 import { Car as CarInterface } from "../interfaces/car";
 import { MdDelete, MdEdit } from "react-icons/md";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import styles from "./CarListCard.module.css";
 import { HTTP } from "../services/http";
@@ -31,7 +31,7 @@ function CarListCard({ car }: CarProps) {
 
   return (
     <article className={styles.CarListCard}>
-      <div className={styles.content}>
+      <Link to={`/car/${car.id}`} className={styles.content}>
         <header>
           <h2>{car.make}</h2>
         </header>
@@ -43,7 +43,7 @@ function CarListCard({ car }: CarProps) {
             <strong>Year:</strong> {car.year}
           </p>
         </section>
-      </div>
+      </Link>
       <div className={styles.actions}>
         <button
           aria-label={`Edit car with id ${car.id}`}

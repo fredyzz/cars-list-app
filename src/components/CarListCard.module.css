@@ -15,10 +15,19 @@
   color: var(--c-primary);
 }
 
+.CarListCard.active {
+  background-color: var(--c-primary);
+  color: var(--c-secondary);
+}
+
 .CarListCard:hover {
   background-color: var(--c-primary);
   color: var(--c-secondary);
   cursor: pointer;
+
+  a {
+    color: var(--c-secondary);
+  }
 }
 
 .content {
