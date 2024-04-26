@@ -27,7 +27,7 @@ function EditCar() {
   if (selectedCar === undefined) {
     return (
       <Layout>
-        <div className={styles.AddCar}>
+        <div className={styles.EditCar}>
           <h2>Car not found</h2>
         </div>
       </Layout>
@@ -37,7 +37,7 @@ function EditCar() {
   if (selectedCar !== undefined) {
     return (
       <Layout>
-        <div className={styles.AddCar}>
+        <div className={styles.EditCar}>
           <EditCarForm initialState={selectedCar} />
         </div>
       </Layout>

@@ -6,7 +6,7 @@ import { Car } from "../interfaces/car";
 import { useCarsContext } from "../contexts/CarsContext/useCarsContext";
 import { HTTP } from "../services/http/index";
 
-import styles from "./AddCarForm.module.css";
+import styles from "./EditCarForm.module.css";
 
 function AddCarForm({ initialState }: { initialState: Car }) {
   const navigate = useNavigate();
@@ -181,12 +181,13 @@ function AddCarForm({ initialState }: { initialState: Car }) {
         {Boolean(notification) && (
           <p className={styles.notification}>{notification}</p>
         )}
+
         <button
           type="submit"
           role="button"
-          className={styles.submitButton}
+          className={styles.actionButton}
           disabled={isSubmitting}
-          aria-label="Save Car"
+          aria-label="Edit Car"
         >
           Edit Car
         </button>
