@@ -5,6 +5,7 @@ import { State } from "./index";
 
 export enum ACTIONS {
   ADD_CAR = "ADD_CAR",
+  DELETE_CAR = "DELETE_CAR",
   FILTER_CARS = "FILTER_CARS",
   RESET_FILTER = "RESET_FILTER",
   SET_CARS = "SET_CARS",
@@ -15,6 +16,7 @@ export enum ACTIONS {
 
 export type Action =
   | { type: ACTIONS.ADD_CAR; payload: Car }
+  | { type: ACTIONS.DELETE_CAR; payload: string }
   | { type: ACTIONS.SET_CARS; payload: CarList }
   | { type: ACTIONS.FILTER_CARS; payload: (car: Car) => boolean }
   | { type: ACTIONS.RESET_FILTER }
@@ -28,6 +30,11 @@ export const reducer = (state: State, action: Action): State => {
       return {
         ...state,
         cars: [...(state.cars || []), action.payload],
+      };
+    case ACTIONS.DELETE_CAR:
+      return {
+        ...state,
+        cars: state.cars?.filter((car) => car.id !== action.payload) || [],
       };
     case ACTIONS.SET_CARS:
       return { ...state, cars: action.payload };

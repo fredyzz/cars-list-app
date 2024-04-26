@@ -1,6 +1,10 @@
+:root {
+  --action-button-size: 26px;
+}
+
 .CarListCard {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   padding: 0.8rem;
@@ -15,4 +19,34 @@
   background-color: var(--c-primary);
   color: var(--c-secondary);
   cursor: pointer;
+}
+
+.content {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  flex: 4;
+  padding-left: var(--action-button-size);
+}
+
+.actions {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-end;
+  height: 100%;
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    height: var(--action-button-size);
+    padding: 0;
+    width: var(--action-button-size);
+
+    svg {
+      color: var(--c-accent);
+    }
+  }
 }

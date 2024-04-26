@@ -5,15 +5,7 @@
 import { render, screen } from "@testing-library/react";
 import CarListCard from "../CarListCard";
 
-test("renders CarListCard", () => {
-  const expectedPropsToDisplay = ["make", "model", "year"];
-  const expectedPropsNotToDisplay = [
-    "color",
-    "engine",
-    "transmission",
-    "doors",
-  ];
-
+describe("CarListCard", () => {
   const car = {
     id: "1",
     make: "Toyota",
@@ -24,17 +16,38 @@ test("renders CarListCard", () => {
     transmission: "Automatic",
     doors: 4,
   };
-  render(<CarListCard car={car} />);
 
-  expectedPropsToDisplay.forEach((prop) => {
-    // @ts-expect-error - disabled for test
-    const regex = new RegExp(`${car[prop]}`, "i");
-    expect(screen.getByText(regex)).toBeInTheDocument();
+  test("renders CarListCard", () => {
+    const expectedPropsToDisplay = ["make", "model", "year"];
+    const expectedPropsNotToDisplay = [
+      "color",
+      "engine",
+      "transmission",
+      "doors",
+    ];
+
+    render(<CarListCard car={car} />);
+
+    expectedPropsToDisplay.forEach((prop) => {
+      // @ts-expect-error - disabled for test
+      const regex = new RegExp(`${car[prop]}`, "i");
+      expect(screen.getByText(regex)).toBeInTheDocument();
+    });
+
+    expectedPropsNotToDisplay.forEach((prop) => {
+      // @ts-expect-error - disabled for test
+      const regex = new RegExp(`${car[prop]}`, "i");
+      expect(screen.queryByText(regex)).not.toBeInTheDocument();
+    });
   });
 
-  expectedPropsNotToDisplay.forEach((prop) => {
-    // @ts-expect-error - disabled for test
-    const regex = new RegExp(`${car[prop]}`, "i");
-    expect(screen.queryByText(regex)).not.toBeInTheDocument();
+  test("renders delete button", () => {
+    render(<CarListCard car={car} />);
+
+    const deleteButton = screen.getByRole("button");
+    expect(deleteButton).toBeInTheDocument();
+    expect(
+      screen.getByLabelText(`Delete car with id ${car.id}`)
+    ).toBeInTheDocument();
   });
 });
