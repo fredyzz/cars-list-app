@@ -39,7 +39,7 @@ describe("Navbar", () => {
     );
 
     routesConfig.forEach((route) => {
-      if (route.path === "*") return;
+      if (route.path === "*" || route.notVisible) return;
 
       const link = screen.getByRole("menuitem", { name: route.label });
       expect(link).toBeInTheDocument();

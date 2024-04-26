@@ -14,7 +14,7 @@ function Navbar() {
         <h1>GARAGE APP</h1>
       </Link>
       {routesConfig.map((route) => {
-        if (route.path !== "*") {
+        if (route.path !== "*" && !route.notVisible) {
           return (
             <Link
               to={route.path}
